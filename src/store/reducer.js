@@ -9,7 +9,13 @@ function reducer( state, action ) {
               ...state,
               products: action.payload
           }
-          
+
+        case 'LOAD_CATEGORIES': 
+          return {
+              ...state,
+              categories: action.payload
+          }
+
         case 'ADD_PRODUCT': 
           return {
               ...state,

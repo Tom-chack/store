@@ -46,6 +46,8 @@ header nav ul li{
   margin-right: 5px;
 }
 
+/* Home / Products */
+
 .products{
   display: flex;
   justify-content: flex-start;
@@ -83,4 +85,34 @@ header nav ul li{
   width: auto;
   height: 150px;
   display: inline-block;
+}
+
+/* Categories */
+.categories{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.category{
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  border: 1px solid #ccc;
+  min-height: 300px;
+  margin: 10px;
+}
+
+.category div{
+  padding: 10px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.category .title{
+  text-transform: capitalize;
+  font-size: 24px;
+  padding: 20px 0;
 }

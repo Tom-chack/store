@@ -7,31 +7,27 @@ function Home() {
     const store = useStore();
 
     useEffect(() => {
+
+        /* Fetch products and set them to state.products */
         fetch('https://fakestoreapi.com/products')
         .then( res => res.json() )
         .then( data => {
             store.dispatch( {type: 'LOAD_PRODUCTS', payload: data} )
         })
-        .catch( err => {
-            console.log( err.message );
-        });
-
-        console.log(store);
+        .catch( err => console.log( err.message ) );
 
     }, []);
 
 
     return (
         <div className="products">
-            {
-            store.state.products.map( product => {
+            { store.state.products.map( product => {
                 return( <div className="product" key={'p_' + product.id}>
                     <div className="thumb"><img src={product.image} /></div>
                     <div className="name">{product.title}</div>
                     <div className="price">Price: ${product.price}</div>
                 </div>)
-            })
-            }
+            }) }
         </div>
     )
 }

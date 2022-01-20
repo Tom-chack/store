@@ -7,6 +7,7 @@ const initialState = {
         email: '',
         role: 'member',
     },
+    categories: [],
     products:[]
 };
 
