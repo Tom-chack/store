@@ -8,7 +8,7 @@ function Layout() {
     return (
         <React.Fragment>
             <header>
-                <div>Logo</div>
+                <div className="logo">Logo</div>
                 <nav>
                     <ul>
                         <li><Link to='/'>Home</Link></li>

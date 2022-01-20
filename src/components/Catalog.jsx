@@ -1,10 +1,10 @@
-function Catalog({categories}) {
+function Catalog() {
     return (
         <div>
             Product Categories
             <hr />
             <ul>
-            { categories.map( category => <li key={category.CategoryValue}>{category.CatName}</li> ) }
+            {/* { categories.map( category => <li key={category.CategoryValue}>{category.CatName}</li> ) } */}
             </ul>
             
         </div>
