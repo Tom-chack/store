@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {useStore} from '../store';
+import Product from './Product';
 
 function Catalog() {
 
@@ -24,8 +25,8 @@ function Catalog() {
                 return( 
                     <div className="category" key={'c_' + index}>
                         <div className="title">{category}</div>
-                        <div>
-                            Recent Products...
+                        <div className="category-products">
+                            {store.state.products.filter( (product) => product.category === category).map( (product) => <Product key={product.id} product={product} extraClass={"preview"}/>).slice(0, 3) }
                         </div>
                     </div>
                 )

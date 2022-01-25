@@ -1,6 +1,10 @@
-function Product() {
+function Product({product, extraClass}) {
     return (
-        <div> Under construction... </div>
+        <div className={'product ' + extraClass }>
+            <div className="thumb"><img src={product.image} alt={product.title} title={product.title} /></div>
+            <div className="name">{product.title}</div>
+            <div className="price">Price: ${product.price}</div>
+        </div>
     )
 }
 

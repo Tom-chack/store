@@ -13,7 +13,6 @@ code {
 }
 
 header {
-  width: 100%;
   border-bottom: 1px solid #ccc;
   padding: 10px;
   background-color: #F5F5F5;
@@ -96,7 +95,7 @@ header nav ul li{
 }
 
 .category{
-  width: 23%;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -108,11 +107,51 @@ header nav ul li{
 
 .category div{
   padding: 10px 0;
-  border-bottom: 1px dashed #ccc;
 }
 
 .category .title{
   text-transform: capitalize;
   font-size: 24px;
   padding: 20px 0;
+}
+
+.category-products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.product.preview{
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 5px;
+  border: none;
+  margin: 5px;
+}
+
+.product.preview div{
+  padding: 10px 0;
+  border-bottom: 1px dashed #ccc;
+  font-size:13px;
+}
+
+.product.preview div:last-child{
+  padding: 5px 0;
+  border-bottom: none;
+}
+
+.product.preview .thumb{
+  width: 100%;
+  text-align: center;
+  height: 100px;
+}
+
+.product.preview img {
+  width: auto;
+  max-width: 90px;
+  height: 80px;
+  display: inline-block;
 }

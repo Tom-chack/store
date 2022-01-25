@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {useStore} from '../store';
+import Product from './Product';
 
 
 function Home() {
@@ -22,11 +23,7 @@ function Home() {
     return (
         <div className="products">
             { store.state.products.map( product => {
-                return( <div className="product" key={'p_' + product.id}>
-                    <div className="thumb"><img src={product.image} /></div>
-                    <div className="name">{product.title}</div>
-                    <div className="price">Price: ${product.price}</div>
-                </div>)
+                return( <Product key={product.id} product={product}/>)
             }) }
         </div>
     )
