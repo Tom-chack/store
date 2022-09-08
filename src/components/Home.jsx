@@ -17,7 +17,7 @@ function Home() {
         })
         .catch( err => console.log( err.message ) );
 
-    }, []);
+    }, [store]);
 
 
     return (
