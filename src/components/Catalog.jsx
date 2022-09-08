@@ -13,7 +13,7 @@ function Catalog() {
         store.dispatch({ type: "LOAD_CATEGORIES", payload: data });
       })
       .catch((err) => console.log(err.message));
-  }, []);
+  }, [store]);
 
   return (
     <div className="categories">
